@@ -1,0 +1,110 @@
+/* UPPER SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 56px;
+    left: 12px;
+    bottom: 0;
+    width: 212px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.sidebar:hover {
+    overflow-y: auto;
+    opacity: 1;
+  }
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Adjust the width as needed */
+    opacity: 0;
+}
+
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 8px;
+}
+
+
+.upper-sidebar,
+.center-sidebar,
+.lower-sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 2px 10px 6px;
+    border-bottom: 1px solid rgb(80, 80, 80);
+
+}
+
+
+.sidebar div:not(.sidebar-tooltip) {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sidebar div:hover {
+    background-image: linear-gradient(to right, rgba(99, 197, 218, 0.2),rgb(20,20,20));
+}
+.sidebar div:active{
+    background-color: #63C5DA80;
+    
+}
+.sidebar div:hover img{
+    filter: drop-shadow(0px 0px 5px rgb(99, 197, 218));
+    
+    
+}
+.sidebar div:hover p{
+    text-shadow: 0 0 5px #63C5DA;
+}
+
+.sidebar img {
+    width: 24px;
+    margin: 0 22px 0 14px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: white;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.upper-sidebar div:first-child{
+    background-image: linear-gradient(to right, rgb(46, 46, 46),rgb(20,20,20));
+}
+.upper-sidebar div:first-child{
+    background-image: linear-gradient(to right, rgba(99, 197, 218, 0.4),rgb(20,20,20));
+}
+
+/* SIDEBAR TOOLTIPS */
+.upper-sidebar div:not(.sidebar-tooltip), .center-sidebar div:not(.sidebar-tooltip), .lower-sidebar div:not(.sidebar-tooltip){
+    position: relative;
+}
+.upper-sidebar div:not(.sidebar-tooltip):hover .sidebar-tooltip, .center-sidebar div:not(.sidebar-tooltip):hover .sidebar-tooltip, .lower-sidebar div:not(.sidebar-tooltip):hover .sidebar-tooltip{
+    transition-delay: 1s;
+    opacity: 1;
+}
+.sidebar-tooltip{
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    padding: 4px 6px;
+    border: 1px solid rgb(212, 212, 212);
+    font-family: Arial;
+    font-size: 12px;
+    color: rgb(212, 212, 212);
+    background-color: rgb(48, 48, 48);
+    opacity: 0;
+
+    border-radius: 0;
+    pointer-events: none;
+    white-space: nowrap;
+  }

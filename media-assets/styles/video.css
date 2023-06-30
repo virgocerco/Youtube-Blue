@@ -1,0 +1,310 @@
+.vidthumbnail-ctr {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+/* VIDEO PREVIEW ADVERTISING */
+.ragnarok-signup {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 100px;
+    border-radius: 12px;
+    color: white;
+}
+.ragnarok-signup:hover {
+    background-color: rgba(170, 170, 170, 0.3);
+}
+.ragnarok-signup img {
+    width: 20px;
+}
+
+.video-open-link {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border-radius: 6px;
+    background-color: black;
+    opacity: 0.9;
+}
+.video-open-link img {
+    width: 20px;
+}
+
+.video-grid a:nth-child(1) .vidthumbnail-ctr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 190.77px;
+    overflow: hidden;
+}
+
+.video-grid a:nth-child(1) .ragnarok-signup {
+    opacity: 0;
+}
+
+.video-grid a:nth-child(1):hover .ragnarok-signup {
+    opacity: 1;
+}
+
+/* IMAGE LAYER */
+.video-grid a:nth-child(1) .video-thumbnail:nth-child(1) {
+    border-radius: 0;
+    width: 380px;
+    filter: blur(4px);
+}
+
+.video-grid a:nth-child(1) .video-thumbnail:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    width: 100%;
+}
+
+.vidicon-ctr {
+    width: 35px;
+}
+
+.vidinfo-ctr {
+    display: grid;
+    grid-template-columns: 50px 1fr 30px;
+}
+
+.video-grid a:nth-child(1) .vidinfo-ctr {
+    grid-template-columns: 1fr 30px;
+}
+
+/* ADS SPAN */
+.video-grid a:nth-child(1) .vidinfo-ctr .video-stats span:nth-child(1) {
+    font-weight: bolder;
+    color: white;
+}
+
+.video-grid a:nth-child(1) .vidinfo-ctr .video-stats span:nth-child(2) {
+    font-size: 10px;
+    color: white;
+}
+
+/* ADS TOOLTIP */
+.video-grid a:nth-child(1) .main-block .author-tooltip {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    margin-right: 12px;
+    padding: 4px 6px;
+    background-color: rgb(40, 40, 40);
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 0;
+    color: rgb(212, 212, 212);
+    font-family: Arial;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.video-grid a:nth-child(1) .main-block:hover .author-tooltip {
+    transition: opacity 0.1s ease-in;
+    opacity: 1;
+}
+
+.video-grid a:nth-child(1) .video-author {
+    margin-bottom: 10px;
+}
+
+.video-grid a:nth-child(1) .video-author span:hover {
+    color: #63C5DA;
+    text-shadow: 0 0 10px #63C5DA50;
+    transition: color 0.05s;
+}
+
+
+
+
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    filter: blur(10);
+}
+
+.video-thumbnail:hover {
+    border-radius: 0;
+    transition: border-radius 0.5s;
+}
+
+.video-icon {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.video-options {
+    margin-left: -10px;
+}
+
+.btnVidOps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-style: none;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 14px;
+    margin-top: -8px;
+    opacity: 0;
+    transition: background-color 0.4s;
+    color: white;
+
+}
+
+.btnVidOps:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+.btnVidOps:active {
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.btnVidOps h2 {
+    margin-top: 18px;
+}
+
+.vidinfo-ctr:hover .video-options .btnVidOps {
+    opacity: 1;
+}
+
+.video-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 8px;
+
+}
+
+.video-author {
+    display: inline-block;
+}
+
+.video-author:not(.video-grid a:nth-child(1) .video-author):hover {
+    color: #63C5DA;
+    text-shadow: 0 0 10px #63C5DA50;
+    transition: color 0.05s;
+}
+
+
+.video-info p {
+    padding-bottom: 2px;
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 338px);
+    column-gap: 16px;
+    row-gap: 58px;
+}
+
+.video-preview {
+    position: relative;
+    text-decoration: none;
+}
+
+.video-preview:hover .vidthumbnail-ctr .video-length {
+    opacity: 0;
+    transition: opacity 0.38s;
+}
+
+.video-preview:nth-child(1):hover .vidthumbnail-ctr {
+    filter: brightness(0.5);
+}
+
+
+.video-length {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    padding: 2px 4px 2px 4px;
+    border-radius: 4px;
+    background-color: black;
+    opacity: 0.86;
+}
+
+.video-length p {
+
+    font-family: Roboto;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* VIDEO AUTHOR TOOLTIPS */
+.video-info {
+    position: relative;
+}
+
+.author-tooltip {
+    position: absolute;
+    top: 0;
+    margin-right: 12px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 4px;
+    background-color: rgba(100, 100, 100, 0.95);
+    color: white;
+    font-family: Arial;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+
+.main-block:hover .author-tooltip{
+    transition: opacity 0.1s ease-in;
+    opacity: 1;
+}
+.banner-ctr{
+    position: absolute;
+    top: 110px;
+    left: 266px;
+    right: 40px;
+    height: 240px;
+}
+.youtube-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.youtube-banner img {
+    width: 1050px;
+}
+

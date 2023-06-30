@@ -1,0 +1,41 @@
+* {
+    /* MAKE THE WEB TEMPLATE LOOK PRESENTATION */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 136px 0 0 230px;
+    background-color: rgb(16, 16, 16);
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    /* Adjust the width as needed */
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(170, 170, 170);
+    border-radius: 8px;
+}
+
+
+p,
+h3,
+h4,
+::placeholder,
+span {
+    margin: 0;
+    font-family: Roboto, Arial;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: center;
+}
